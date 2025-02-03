@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peremoga PMC Tokenomics Policy</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container navvy">
+            <a class="navbar-brand" href="#">Peremoga PMC</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#introduction">Introduction</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#payment">Payment Structure</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#distribution">Token Distribution</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#minting">Minting Schedule</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#governance">Governance</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1>Peremoga PMC <br> Tokenomics Policy</h1>
+        <p class="header-p"><strong>Version:</strong> 1.0 | <strong>February 2025</strong></p>
+        <p class="header-p"><strong>Authorized by:</strong> Peremoga PMC Leadership</p>
+
+        <p style="margin-top: 40px;">This document outlines the tokenomics policy for Peremoga PMC, defining how employees are compensated using Peremoga Tokens (PRM) and the HelpFromAbove Tokens (HFA)...</p>
+
+        <h2 id="payment">Payment Structure</h2>
+        <h3>Compensation in Peremoga Tokens (PRM)</h3>
+        <ul>
+            <li>Employees and contractors will be paid in PRM.</li>
+            <li>1 PRM = 1 DJED during ICO.</li>
+            <li>Payments executed via blockchain-based smart contracts.</li>
+        </ul>
+
+        <h2 id="distribution">Token Distribution & Vesting</h2>
+        <div class="chart-container" style="position: relative; height: 400px; width: 100%;">
+            <canvas id="tokenDistributionChart"></canvas>
+        </div>
+
+        <h2 id="minting">Minting Schedule</h2>
+        <table class="table table-bordered table-dark">
+            <tr>
+                <th>Phase</th>
+                <th>Amount Minted (PRM)</th>
+                <th>Purpose</th>
+            </tr>
+            <tr>
+                <td>Phase 1</td>
+                <td>150M</td>
+                <td>Initial launch & operational expenses</td>
+            </tr>
+            <tr>
+                <td>ICO</td>
+                <td>100M</td>
+                <td>Treasury funding via ICO</td>
+            </tr>
+            <tr>
+                <td>Phase 2</td>
+                <td>100M</td>
+                <td>Future operational expansion</td>
+            </tr>
+            <tr>
+                <td>Phase 3</td>
+                <td>100M</td>
+                <td>Continued payroll and infrastructure</td>
+            </tr>
+            <tr>
+                <td>Final Cap</td>
+                <td>500M (Max Supply)</td>
+                <td>Total capped token supply</td>
+            </tr>
+        </table>
+
+        <h2 id="governance">Smart Contract-Based Governance</h2>
+        <h3>Payroll Automation</h3>
+        <ul style="text-align: center;">
+            <li>Payments processed via Plutus smart contracts.</li>
+            <li>Unauthorized transactions blocked automatically.</li>
+        </ul>
+
+        <h2>Future Adjustments</h2>
+        <p style="text-align: center;">This policy is subject to updates based on DAO governance decisions, market conditions, and PMC operational expansions.</p>
+
+        <p style="text-align: center;"><strong>For inquiries, contact the Peremoga PMC Treasury Team.</strong></p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const tokenDistributionData = {
+            labels: ["Employee Payroll & Benefits", "Treasury & Operational Reserves", "Veterans Fund", "Deceased & Medical Fund"],
+            datasets: [{
+                data: [25, 25, 25, 25], 
+                backgroundColor: [
+                    "#FF6384", 
+                    "#36A2EB",
+                    "#FFCE56", 
+                    "#4BC0C0"  
+                ],
+                hoverBackgroundColor: [
+                    "#FF6384",
+                    "#36A2EB",
+                    "#FFCE56",
+                    "#4BC0C0"
+                ]
+            }]
+        };
+
+        const config = {
+            type: 'pie',
+            data: tokenDistributionData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            color: '#ffffff', 
+                            font: {
+                                size: 14
+                            }
+                        }
+                    },
+                    tooltip: {
+                        enabled: true,
+                        callbacks: {
+                            label: function(context) {
+                                return `${context.label}: ${context.raw}%`;
+                            }
+                        }
+                    }
+                }
+            }
+        };
+
+        const tokenDistributionChart = new Chart(
+            document.getElementById('tokenDistributionChart'),
+            config
+        );
+    </script>
+</body>
+</html>

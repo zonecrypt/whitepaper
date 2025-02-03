@@ -43,7 +43,7 @@ ul {
     flex-direction: column;
     align-items: center;
     padding: 0;
-    /* list-style-type: none; */
+    list-style-type: none;
 }
 
 h1, h2, h3 {
@@ -103,7 +103,7 @@ th {
 
 @media (max-width: 442px) {
     h1 {
-        font-size: 50px; 
-        margin: 20px 0 20px 10px;
+        font-size: 47px; 
+        margin: 20px 0 20px 0;
     }
 }

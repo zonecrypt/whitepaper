@@ -155,9 +155,22 @@ th {
     }
 }
 
-@media (max-width: 442px) {
+@media (max-width: 480px) {
     h1 {
         font-size: 47px;
         margin: 20px 0 20px 0;
+    }
+
+    .popup {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .popup p {
+        font-size: 12px;
+    }
+
+    .close {
+        font-size: 20px;
     }
 }

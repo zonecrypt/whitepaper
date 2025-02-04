@@ -24,11 +24,11 @@ h1 {
     margin: 40px 0 40px 20px;
 }
 
-.header-p{
+.header-p {
     margin-left: 20px;
 }
 
-.announce p{
+.announce p {
     text-align: center;
 }
 
@@ -51,7 +51,9 @@ ul {
     list-style-type: none;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: #f8f9fa;
     font-weight: 600;
 }
@@ -65,11 +67,14 @@ table {
     font-size: 14px;
 }
 
-table, th, td {
+table,
+th,
+td {
     border: 1px solid #444;
 }
 
-th, td {
+th,
+td {
     padding: 10px;
     text-align: left;
 }
@@ -99,16 +104,60 @@ th {
     color: #adb5bd !important;
 }
 
+.popup {
+    display: none;
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    background-color: #1e1e1e;
+    border: 1px solid #444;
+    width: 70%;
+    padding: 20px;
+    text-align: center;
+    z-index: 1000;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    word-wrap: break-word;
+}
+
+.popup-open::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    backdrop-filter: blur(5px);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #ffffff;
+    text-decoration: none;
+}
+
 @media (max-width: 768px) {
     h1 {
-        font-size: 60px; 
+        font-size: 60px;
         margin: 20px 0 20px 10px;
     }
 }
 
 @media (max-width: 442px) {
     h1 {
-        font-size: 47px; 
+        font-size: 47px;
         margin: 20px 0 20px 0;
     }
 }

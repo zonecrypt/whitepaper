@@ -1,0 +1,190 @@
+/* Global Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html, body {
+    font-family: 'Inter', sans-serif;
+    background: #ffffff;
+    color: #333333;
+    line-height: 1.65;
+    scroll-behavior: smooth;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Container Helper */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* NAVIGATION */
+  .wp-navbar {
+    background: #f8f8f8;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #d4af37; /* Gold accent */
+    text-decoration: none;
+  }
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  .nav-menu li a {
+    font-size: 1rem;
+    color: #333;
+    transition: color 0.3s;
+  }
+  .nav-menu li a:hover,
+  .nav-menu li a.active {
+    color: #d4af37;
+  }
+  
+  /* HERO SECTION */
+  .hero {
+    background: #f0f0f0;
+    padding: 100px 0 60px;
+    text-align: center;
+  }
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  .hero-tagline {
+    font-size: 1.4rem;
+    color: #555;
+  }
+  
+  /* TABLE OF CONTENTS */
+  .toc {
+    margin: 40px 0;
+    padding: 20px;
+    background: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 5px;
+  }
+  .toc h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #d4af37;
+  }
+  .toc ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .toc ul li {
+    margin-bottom: 8px;
+  }
+  .toc ul li a {
+    color: #d4af37;
+    font-weight: 500;
+  }
+  .toc ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* CONTENT SECTIONS */
+  .section {
+    margin-bottom: 60px;
+  }
+  .section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #d4af37;
+    padding-bottom: 5px;
+    color: #333;
+  }
+  .section h3 {
+    font-size: 1.6rem;
+    margin: 20px 0 10px;
+    color: #555;
+  }
+  .section p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+  }
+  .section ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+  }
+  .section ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  
+  /* Back to Top Button */
+  #backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #d4af37;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    transition: background 0.3s;
+  }
+  #backToTop:hover {
+    background: #b38e2b;
+  }
+  
+  /* ANIMATIONS */
+  /* All elements with the "animate-item" class will start hidden */
+  .animate-item {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  
+  /* When they receive the "in-view" class, run the fadeInUp animation */
+  .animate-item.in-view {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.2rem;
+    }
+    .hero-tagline {
+      font-size: 1.2rem;
+    }
+    .nav-menu {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }

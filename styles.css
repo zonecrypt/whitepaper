@@ -287,3 +287,17 @@ ul {
         font-size: 80px;
     }
 }
+@media (max-width: 768px) {
+    .pdf-container {
+        height: 60vh; /* Adjust the height for better mobile viewing */
+        border: none; /* Remove borders for a cleaner mobile look */
+        box-shadow: none; /* Remove shadow to reduce clutter on small screens */
+    }
+}
+.pdf-container {
+    width: 100%;
+    height: 80vh;
+    border: 2px solid #ccc;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
